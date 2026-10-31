@@ -1,0 +1,9 @@
+{
+  "company": "Anyscale",
+  "title": "Ingress Autopsy",
+  "test_command": "python -m unittest -v",
+  "demo_command": "python autopsy.py",
+  "scope": "Measured loopback HTTP admission/worker fixture; synthetic delays; no Ray/GPU integration",
+  "implemented": true,
+  "integration_status": "unverified"
+}

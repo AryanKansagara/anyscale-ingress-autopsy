@@ -1,0 +1,1148 @@
+{
+  "schema_version": 1,
+  "transport": "real_loopback_http",
+  "ray_integration": false,
+  "gpu_or_model_inference": false,
+  "workload": "injected sleep delays; not CPU compute",
+  "measurement_scope": "single-host client wall time, no cold start or distributed clocks",
+  "cases": {
+    "ingress": {
+      "baseline": {
+        "configuration": {
+          "ingress": 1,
+          "workers": 8,
+          "ingress_delay": 0.015,
+          "worker_delay": 0.001,
+          "requests": 24,
+          "clients": 12
+        },
+        "elapsed_seconds": 0.37480125100000805,
+        "requests_per_second": 64.0339378162841,
+        "diagnosis": {
+          "cause": "ingress",
+          "mean_ingress_queue_and_service_seconds": 0.1369101027916694,
+          "mean_worker_queue_and_service_seconds": 0.0011066049583519089,
+          "reason": "local stage residence ratio; hypothesis, not causal proof"
+        },
+        "traces": [
+          {
+            "arrival": 2037.033051406,
+            "ingress_start": 2037.118685079,
+            "ingress_end": 2037.133776142,
+            "worker_start": 2037.133798375,
+            "worker_end": 2037.134868757
+          },
+          {
+            "arrival": 2037.027862986,
+            "ingress_start": 2037.027866872,
+            "ingress_end": 2037.042951025,
+            "worker_start": 2037.042977904,
+            "worker_end": 2037.044036459
+          },
+          {
+            "arrival": 2037.032137408,
+            "ingress_start": 2037.073261384,
+            "ingress_end": 2037.088338616,
+            "worker_start": 2037.088362902,
+            "worker_end": 2037.089436148
+          },
+          {
+            "arrival": 2037.029004087,
+            "ingress_start": 2037.042998689,
+            "ingress_end": 2037.058080549,
+            "worker_start": 2037.058109211,
+            "worker_end": 2037.059186233
+          },
+          {
+            "arrival": 2037.032333717,
+            "ingress_start": 2037.088380673,
+            "ingress_end": 2037.103459343,
+            "worker_start": 2037.103487284,
+            "worker_end": 2037.104558768
+          },
+          {
+            "arrival": 2037.033427482,
+            "ingress_start": 2037.148999484,
+            "ingress_end": 2037.164032577,
+            "worker_start": 2037.164058655,
+            "worker_end": 2037.165132733
+          },
+          {
+            "arrival": 2037.03029334,
+            "ingress_start": 2037.058134548,
+            "ingress_end": 2037.073216357,
+            "worker_start": 2037.073240413,
+            "worker_end": 2037.074333153
+          },
+          {
+            "arrival": 2037.032599447,
+            "ingress_start": 2037.103511149,
+            "ingress_end": 2037.118623894,
+            "worker_start": 2037.118646768,
+            "worker_end": 2037.119719393
+          },
+          {
+            "arrival": 2037.033322464,
+            "ingress_start": 2037.133831518,
+            "ingress_end": 2037.148934594,
+            "worker_start": 2037.148964128,
+            "worker_end": 2037.150039667
+          },
+          {
+            "arrival": 2037.033634442,
+            "ingress_start": 2037.164093997,
+            "ingress_end": 2037.179197033,
+            "worker_start": 2037.179221348,
+            "worker_end": 2037.180304755
+          },
+          {
+            "arrival": 2037.033953105,
+            "ingress_start": 2037.179257532,
+            "ingress_end": 2037.194342726,
+            "worker_start": 2037.194364688,
+            "worker_end": 2037.195448911
+          },
+          {
+            "arrival": 2037.034134531,
+            "ingress_start": 2037.194396751,
+            "ingress_end": 2037.209479551,
+            "worker_start": 2037.209500282,
+            "worker_end": 2037.210586908
+          },
+          {
+            "arrival": 2037.044957486,
+            "ingress_start": 2037.209531313,
+            "ingress_end": 2037.224648975,
+            "worker_start": 2037.224683095,
+            "worker_end": 2037.225757302
+          },
+          {
+            "arrival": 2037.060326517,
+            "ingress_start": 2037.224703755,
+            "ingress_end": 2037.239793416,
+            "worker_start": 2037.239826685,
+            "worker_end": 2037.240899541
+          },
+          {
+            "arrival": 2037.075410445,
+            "ingress_start": 2037.239864967,
+            "ingress_end": 2037.254973385,
+            "worker_start": 2037.25501107,
+            "worker_end": 2037.25604928
+          },
+          {
+            "arrival": 2037.090298665,
+            "ingress_start": 2037.255045796,
+            "ingress_end": 2037.270138271,
+            "worker_start": 2037.270163328,
+            "worker_end": 2037.271235813
+          },
+          {
+            "arrival": 2037.105705156,
+            "ingress_start": 2037.270211248,
+            "ingress_end": 2037.285297825,
+            "worker_start": 2037.285322741,
+            "worker_end": 2037.286393714
+          },
+          {
+            "arrival": 2037.120675292,
+            "ingress_start": 2037.285364007,
+            "ingress_end": 2037.300463577,
+            "worker_start": 2037.300497257,
+            "worker_end": 2037.301641327
+          },
+          {
+            "arrival": 2037.136160459,
+            "ingress_start": 2037.300531377,
+            "ingress_end": 2037.315642719,
+            "worker_start": 2037.315667135,
+            "worker_end": 2037.316790826
+          },
+          {
+            "arrival": 2037.151070856,
+            "ingress_start": 2037.315716033,
+            "ingress_end": 2037.330809739,
+            "worker_start": 2037.330838261,
+            "worker_end": 2037.331928282
+          },
+          {
+            "arrival": 2037.166198158,
+            "ingress_start": 2037.330960045,
+            "ingress_end": 2037.346050257,
+            "worker_start": 2037.346083466,
+            "worker_end": 2037.347167723
+          },
+          {
+            "arrival": 2037.181242757,
+            "ingress_start": 2037.346118352,
+            "ingress_end": 2037.361210011,
+            "worker_start": 2037.361242759,
+            "worker_end": 2037.362321684
+          },
+          {
+            "arrival": 2037.19631646,
+            "ingress_start": 2037.361278281,
+            "ingress_end": 2037.37636312,
+            "worker_start": 2037.376385924,
+            "worker_end": 2037.377462645
+          },
+          {
+            "arrival": 2037.211377369,
+            "ingress_start": 2037.376425372,
+            "ingress_end": 2037.3915128,
+            "worker_start": 2037.391525028,
+            "worker_end": 2037.392594999
+          }
+        ],
+        "observed_speedup_vs_baseline": 1.0
+      },
+      "increase_ingress": {
+        "configuration": {
+          "ingress": 8,
+          "workers": 8,
+          "ingress_delay": 0.015,
+          "worker_delay": 0.001,
+          "requests": 24,
+          "clients": 12
+        },
+        "elapsed_seconds": 0.05706680900016181,
+        "requests_per_second": 420.55969871965243,
+        "diagnosis": {
+          "cause": "ingress",
+          "mean_ingress_queue_and_service_seconds": 0.018779144083320414,
+          "mean_worker_queue_and_service_seconds": 0.0011467396250187296,
+          "reason": "local stage residence ratio; hypothesis, not causal proof"
+        },
+        "traces": [
+          {
+            "arrival": 2037.397190087,
+            "ingress_start": 2037.39719204,
+            "ingress_end": 2037.412372299,
+            "worker_start": 2037.412392779,
+            "worker_end": 2037.413466946
+          },
+          {
+            "arrival": 2037.397684048,
+            "ingress_start": 2037.39768575,
+            "ingress_end": 2037.412802922,
+            "worker_start": 2037.412822651,
+            "worker_end": 2037.413908455
+          },
+          {
+            "arrival": 2037.399267833,
+            "ingress_start": 2037.399269526,
+            "ingress_end": 2037.415193137,
+            "worker_start": 2037.415209361,
+            "worker_end": 2037.416378498
+          },
+          {
+            "arrival": 2037.403655627,
+            "ingress_start": 2037.403657761,
+            "ingress_end": 2037.418742054,
+            "worker_start": 2037.418756144,
+            "worker_end": 2037.420043485
+          },
+          {
+            "arrival": 2037.401010283,
+            "ingress_start": 2037.401012646,
+            "ingress_end": 2037.416042219,
+            "worker_start": 2037.416052184,
+            "worker_end": 2037.417243102
+          },
+          {
+            "arrival": 2037.403308497,
+            "ingress_start": 2037.4033102,
+            "ingress_end": 2037.418386591,
+            "worker_start": 2037.418402645,
+            "worker_end": 2037.419545774
+          },
+          {
+            "arrival": 2037.402767634,
+            "ingress_start": 2037.402769226,
+            "ingress_end": 2037.41793572,
+            "worker_start": 2037.417947377,
+            "worker_end": 2037.419017659
+          },
+          {
+            "arrival": 2037.403965763,
+            "ingress_start": 2037.403967496,
+            "ingress_end": 2037.419070977,
+            "worker_start": 2037.419081893,
+            "worker_end": 2037.420406889
+          },
+          {
+            "arrival": 2037.404613424,
+            "ingress_start": 2037.412841238,
+            "ingress_end": 2037.427923237,
+            "worker_start": 2037.427939041,
+            "worker_end": 2037.429485552
+          },
+          {
+            "arrival": 2037.404391158,
+            "ingress_start": 2037.412411356,
+            "ingress_end": 2037.427494628,
+            "worker_start": 2037.427515519,
+            "worker_end": 2037.428609085
+          },
+          {
+            "arrival": 2037.404856431,
+            "ingress_start": 2037.415227693,
+            "ingress_end": 2037.430347368,
+            "worker_start": 2037.430361629,
+            "worker_end": 2037.431437379
+          },
+          {
+            "arrival": 2037.405115872,
+            "ingress_start": 2037.41606352,
+            "ingress_end": 2037.431144969,
+            "worker_start": 2037.431161944,
+            "worker_end": 2037.432236763
+          },
+          {
+            "arrival": 2037.41545722,
+            "ingress_start": 2037.417987145,
+            "ingress_end": 2037.433057328,
+            "worker_start": 2037.433075124,
+            "worker_end": 2037.434147399
+          },
+          {
+            "arrival": 2037.415751507,
+            "ingress_start": 2037.418425995,
+            "ingress_end": 2037.433508585,
+            "worker_start": 2037.433524168,
+            "worker_end": 2037.434642511
+          },
+          {
+            "arrival": 2037.417196745,
+            "ingress_start": 2037.418780851,
+            "ingress_end": 2037.433857823,
+            "worker_start": 2037.433863552,
+            "worker_end": 2037.434937479
+          },
+          {
+            "arrival": 2037.418237943,
+            "ingress_start": 2037.419462391,
+            "ingress_end": 2037.434607053,
+            "worker_start": 2037.434623036,
+            "worker_end": 2037.435723022
+          },
+          {
+            "arrival": 2037.419901156,
+            "ingress_start": 2037.427539844,
+            "ingress_end": 2037.442658969,
+            "worker_start": 2037.442667631,
+            "worker_end": 2037.443736311
+          },
+          {
+            "arrival": 2037.421039387,
+            "ingress_start": 2037.427951779,
+            "ingress_end": 2037.443023574,
+            "worker_start": 2037.443026719,
+            "worker_end": 2037.444176297
+          },
+          {
+            "arrival": 2037.422092104,
+            "ingress_start": 2037.43038974,
+            "ingress_end": 2037.445471685,
+            "worker_start": 2037.445476662,
+            "worker_end": 2037.4465509
+          },
+          {
+            "arrival": 2037.422452138,
+            "ingress_start": 2037.431181268,
+            "ingress_end": 2037.446259892,
+            "worker_start": 2037.446266522,
+            "worker_end": 2037.44734073
+          },
+          {
+            "arrival": 2037.42942967,
+            "ingress_start": 2037.433094051,
+            "ingress_end": 2037.448166978,
+            "worker_start": 2037.448172446,
+            "worker_end": 2037.449245281
+          },
+          {
+            "arrival": 2037.43030831,
+            "ingress_start": 2037.433545925,
+            "ingress_end": 2037.448668324,
+            "worker_start": 2037.448675555,
+            "worker_end": 2037.449803772
+          },
+          {
+            "arrival": 2037.432090848,
+            "ingress_start": 2037.433870883,
+            "ingress_end": 2037.448943148,
+            "worker_start": 2037.448948436,
+            "worker_end": 2037.450039318
+          },
+          {
+            "arrival": 2037.432972663,
+            "ingress_start": 2037.43468978,
+            "ingress_end": 2037.449776326,
+            "worker_start": 2037.449783367,
+            "worker_end": 2037.45085495
+          }
+        ],
+        "observed_speedup_vs_baseline": 6.567762550013009
+      },
+      "increase_workers": {
+        "configuration": {
+          "ingress": 1,
+          "workers": 16,
+          "ingress_delay": 0.015,
+          "worker_delay": 0.001,
+          "requests": 24,
+          "clients": 12
+        },
+        "elapsed_seconds": 0.36816827400002694,
+        "requests_per_second": 65.1875832190751,
+        "diagnosis": {
+          "cause": "ingress",
+          "mean_ingress_queue_and_service_seconds": 0.13620812574997862,
+          "mean_worker_queue_and_service_seconds": 0.0011171741249995648,
+          "reason": "local stage residence ratio; hypothesis, not causal proof"
+        },
+        "traces": [
+          {
+            "arrival": 2037.454980354,
+            "ingress_start": 2037.454981936,
+            "ingress_end": 2037.470064116,
+            "worker_start": 2037.470082443,
+            "worker_end": 2037.471162219
+          },
+          {
+            "arrival": 2037.455464655,
+            "ingress_start": 2037.470100289,
+            "ingress_end": 2037.485179525,
+            "worker_start": 2037.485202028,
+            "worker_end": 2037.486273932
+          },
+          {
+            "arrival": 2037.456815058,
+            "ingress_start": 2037.485232413,
+            "ingress_end": 2037.500322224,
+            "worker_start": 2037.500347331,
+            "worker_end": 2037.501421869
+          },
+          {
+            "arrival": 2037.458018496,
+            "ingress_start": 2037.500369158,
+            "ingress_end": 2037.515456015,
+            "worker_start": 2037.515482534,
+            "worker_end": 2037.516569094
+          },
+          {
+            "arrival": 2037.461471437,
+            "ingress_start": 2037.515543969,
+            "ingress_end": 2037.530632829,
+            "worker_start": 2037.530652448,
+            "worker_end": 2037.531724152
+          },
+          {
+            "arrival": 2037.462741552,
+            "ingress_start": 2037.530680569,
+            "ingress_end": 2037.545767836,
+            "worker_start": 2037.545792452,
+            "worker_end": 2037.546869314
+          },
+          {
+            "arrival": 2037.463288014,
+            "ingress_start": 2037.560967524,
+            "ingress_end": 2037.576242047,
+            "worker_start": 2037.576269137,
+            "worker_end": 2037.577379828
+          },
+          {
+            "arrival": 2037.463061452,
+            "ingress_start": 2037.545826693,
+            "ingress_end": 2037.560916374,
+            "worker_start": 2037.560939358,
+            "worker_end": 2037.562008878
+          },
+          {
+            "arrival": 2037.463484689,
+            "ingress_start": 2037.576299406,
+            "ingress_end": 2037.591388295,
+            "worker_start": 2037.591415255,
+            "worker_end": 2037.592492487
+          },
+          {
+            "arrival": 2037.46374097,
+            "ingress_start": 2037.591449816,
+            "ingress_end": 2037.606532366,
+            "worker_start": 2037.60655546,
+            "worker_end": 2037.607674444
+          },
+          {
+            "arrival": 2037.46433989,
+            "ingress_start": 2037.621757076,
+            "ingress_end": 2037.636842441,
+            "worker_start": 2037.636862911,
+            "worker_end": 2037.637943638
+          },
+          {
+            "arrival": 2037.464152615,
+            "ingress_start": 2037.606610787,
+            "ingress_end": 2037.621694474,
+            "worker_start": 2037.621717558,
+            "worker_end": 2037.622789642
+          },
+          {
+            "arrival": 2037.471951708,
+            "ingress_start": 2037.636908032,
+            "ingress_end": 2037.65199589,
+            "worker_start": 2037.652033926,
+            "worker_end": 2037.653108905
+          },
+          {
+            "arrival": 2037.487195997,
+            "ingress_start": 2037.652046695,
+            "ingress_end": 2037.667128529,
+            "worker_start": 2037.667155188,
+            "worker_end": 2037.668223868
+          },
+          {
+            "arrival": 2037.502404998,
+            "ingress_start": 2037.667202733,
+            "ingress_end": 2037.682292254,
+            "worker_start": 2037.682315879,
+            "worker_end": 2037.68339213
+          },
+          {
+            "arrival": 2037.51772351,
+            "ingress_start": 2037.68233761,
+            "ingress_end": 2037.697425959,
+            "worker_start": 2037.697449333,
+            "worker_end": 2037.698541042
+          },
+          {
+            "arrival": 2037.532562703,
+            "ingress_start": 2037.697473624,
+            "ingress_end": 2037.712569384,
+            "worker_start": 2037.712639717,
+            "worker_end": 2037.713718341
+          },
+          {
+            "arrival": 2037.547994857,
+            "ingress_start": 2037.712755167,
+            "ingress_end": 2037.72786008,
+            "worker_start": 2037.72788723,
+            "worker_end": 2037.728966135
+          },
+          {
+            "arrival": 2037.56295257,
+            "ingress_start": 2037.727915557,
+            "ingress_end": 2037.743000511,
+            "worker_start": 2037.743156931,
+            "worker_end": 2037.744230167
+          },
+          {
+            "arrival": 2037.57827042,
+            "ingress_start": 2037.743186689,
+            "ingress_end": 2037.758284437,
+            "worker_start": 2037.758311547,
+            "worker_end": 2037.759515755
+          },
+          {
+            "arrival": 2037.593406099,
+            "ingress_start": 2037.758348942,
+            "ingress_end": 2037.773433355,
+            "worker_start": 2037.773455718,
+            "worker_end": 2037.774530446
+          },
+          {
+            "arrival": 2037.608899953,
+            "ingress_start": 2037.773484034,
+            "ingress_end": 2037.788588647,
+            "worker_start": 2037.788619583,
+            "worker_end": 2037.789702593
+          },
+          {
+            "arrival": 2037.62363257,
+            "ingress_start": 2037.788652601,
+            "ingress_end": 2037.80374087,
+            "worker_start": 2037.803765897,
+            "worker_end": 2037.804842278
+          },
+          {
+            "arrival": 2037.638750362,
+            "ingress_start": 2037.803834473,
+            "ingress_end": 2037.818941489,
+            "worker_start": 2037.818963021,
+            "worker_end": 2037.820030969
+          }
+        ],
+        "observed_speedup_vs_baseline": 1.0180161558406866
+      }
+    },
+    "worker": {
+      "baseline": {
+        "configuration": {
+          "ingress": 8,
+          "workers": 1,
+          "ingress_delay": 0.001,
+          "worker_delay": 0.015,
+          "requests": 24,
+          "clients": 12
+        },
+        "elapsed_seconds": 0.37141933899988544,
+        "requests_per_second": 64.61699077012089,
+        "diagnosis": {
+          "cause": "worker",
+          "mean_ingress_queue_and_service_seconds": 0.0011909900416734824,
+          "mean_worker_queue_and_service_seconds": 0.13775745604168796,
+          "reason": "local stage residence ratio; hypothesis, not causal proof"
+        },
+        "traces": [
+          {
+            "arrival": 2037.834001942,
+            "ingress_start": 2037.834003855,
+            "ingress_end": 2037.835718754,
+            "worker_start": 2037.864743109,
+            "worker_end": 2037.879850967
+          },
+          {
+            "arrival": 2037.832830342,
+            "ingress_start": 2037.832832876,
+            "ingress_end": 2037.834096421,
+            "worker_start": 2037.834103712,
+            "worker_end": 2037.849189047
+          },
+          {
+            "arrival": 2037.834449705,
+            "ingress_start": 2037.834451688,
+            "ingress_end": 2037.835553866,
+            "worker_start": 2037.849319143,
+            "worker_end": 2037.864418322
+          },
+          {
+            "arrival": 2037.83523939,
+            "ingress_start": 2037.835242024,
+            "ingress_end": 2037.836316031,
+            "worker_start": 2037.880113112,
+            "worker_end": 2037.89521429
+          },
+          {
+            "arrival": 2037.836762732,
+            "ingress_start": 2037.836764835,
+            "ingress_end": 2037.838052446,
+            "worker_start": 2037.895379788,
+            "worker_end": 2037.910474226
+          },
+          {
+            "arrival": 2037.840087044,
+            "ingress_start": 2037.840089197,
+            "ingress_end": 2037.841328822,
+            "worker_start": 2037.925892635,
+            "worker_end": 2037.940974895
+          },
+          {
+            "arrival": 2037.837941804,
+            "ingress_start": 2037.837943757,
+            "ingress_end": 2037.840166351,
+            "worker_start": 2037.910652572,
+            "worker_end": 2037.925748117
+          },
+          {
+            "arrival": 2037.840781909,
+            "ingress_start": 2037.840783752,
+            "ingress_end": 2037.842065785,
+            "worker_start": 2037.941120759,
+            "worker_end": 2037.956218322
+          },
+          {
+            "arrival": 2037.841308342,
+            "ingress_start": 2037.841310225,
+            "ingress_end": 2037.842389646,
+            "worker_start": 2037.956361121,
+            "worker_end": 2037.971475168
+          },
+          {
+            "arrival": 2037.841770281,
+            "ingress_start": 2037.841772274,
+            "ingress_end": 2037.842847373,
+            "worker_start": 2037.987597371,
+            "worker_end": 2038.002753069
+          },
+          {
+            "arrival": 2037.841494977,
+            "ingress_start": 2037.841496609,
+            "ingress_end": 2037.842609363,
+            "worker_start": 2037.971849798,
+            "worker_end": 2037.987111943
+          },
+          {
+            "arrival": 2037.842034324,
+            "ingress_start": 2037.842036317,
+            "ingress_end": 2037.843117515,
+            "worker_start": 2038.002946678,
+            "worker_end": 2038.018144607
+          },
+          {
+            "arrival": 2037.850145752,
+            "ingress_start": 2037.850148546,
+            "ingress_end": 2037.851226769,
+            "worker_start": 2038.018351167,
+            "worker_end": 2038.033448093
+          },
+          {
+            "arrival": 2037.866473521,
+            "ingress_start": 2037.86647989,
+            "ingress_end": 2037.867559836,
+            "worker_start": 2038.033939675,
+            "worker_end": 2038.049020823
+          },
+          {
+            "arrival": 2037.881431318,
+            "ingress_start": 2037.881435363,
+            "ingress_end": 2037.882526231,
+            "worker_start": 2038.049144174,
+            "worker_end": 2038.064243259
+          },
+          {
+            "arrival": 2037.896652752,
+            "ingress_start": 2037.896656578,
+            "ingress_end": 2037.897731977,
+            "worker_start": 2038.064361012,
+            "worker_end": 2038.079453878
+          },
+          {
+            "arrival": 2037.911770605,
+            "ingress_start": 2037.911774501,
+            "ingress_end": 2037.912862919,
+            "worker_start": 2038.079658188,
+            "worker_end": 2038.094744234
+          },
+          {
+            "arrival": 2037.926835595,
+            "ingress_start": 2037.92683917,
+            "ingress_end": 2037.927942751,
+            "worker_start": 2038.094912596,
+            "worker_end": 2038.110008937
+          },
+          {
+            "arrival": 2037.942001758,
+            "ingress_start": 2037.942004682,
+            "ingress_end": 2037.943078629,
+            "worker_start": 2038.110111682,
+            "worker_end": 2038.125209585
+          },
+          {
+            "arrival": 2037.957561674,
+            "ingress_start": 2037.95756523,
+            "ingress_end": 2037.958643343,
+            "worker_start": 2038.125312146,
+            "worker_end": 2038.140401196
+          },
+          {
+            "arrival": 2037.973091101,
+            "ingress_start": 2037.973095658,
+            "ingress_end": 2037.974168373,
+            "worker_start": 2038.140508309,
+            "worker_end": 2038.155637217
+          },
+          {
+            "arrival": 2037.988673406,
+            "ingress_start": 2037.988677882,
+            "ingress_end": 2037.989761213,
+            "worker_start": 2038.15573785,
+            "worker_end": 2038.170829554
+          },
+          {
+            "arrival": 2038.004328628,
+            "ingress_start": 2038.004333495,
+            "ingress_end": 2038.005414392,
+            "worker_start": 2038.170938534,
+            "worker_end": 2038.186023037
+          },
+          {
+            "arrival": 2038.019355556,
+            "ingress_start": 2038.019359422,
+            "ingress_end": 2038.020429413,
+            "worker_start": 2038.186102184,
+            "worker_end": 2038.201194378
+          }
+        ],
+        "observed_speedup_vs_baseline": 1.0
+      },
+      "increase_ingress": {
+        "configuration": {
+          "ingress": 16,
+          "workers": 1,
+          "ingress_delay": 0.001,
+          "worker_delay": 0.015,
+          "requests": 24,
+          "clients": 12
+        },
+        "elapsed_seconds": 0.37248084800012293,
+        "requests_per_second": 64.43284300080867,
+        "diagnosis": {
+          "cause": "worker",
+          "mean_ingress_queue_and_service_seconds": 0.0012215320832922316,
+          "mean_worker_queue_and_service_seconds": 0.13814006983334556,
+          "reason": "local stage residence ratio; hypothesis, not causal proof"
+        },
+        "traces": [
+          {
+            "arrival": 2038.214093988,
+            "ingress_start": 2038.214096892,
+            "ingress_end": 2038.215864914,
+            "worker_start": 2038.215872305,
+            "worker_end": 2038.230958907
+          },
+          {
+            "arrival": 2038.215843908,
+            "ingress_start": 2038.215845771,
+            "ingress_end": 2038.21721417,
+            "worker_start": 2038.231069734,
+            "worker_end": 2038.246157733
+          },
+          {
+            "arrival": 2038.218508592,
+            "ingress_start": 2038.218510605,
+            "ingress_end": 2038.219770215,
+            "worker_start": 2038.276857905,
+            "worker_end": 2038.291966498
+          },
+          {
+            "arrival": 2038.217057655,
+            "ingress_start": 2038.217059999,
+            "ingress_end": 2038.218346017,
+            "worker_start": 2038.246329445,
+            "worker_end": 2038.261438825
+          },
+          {
+            "arrival": 2038.217413979,
+            "ingress_start": 2038.217415721,
+            "ingress_end": 2038.218706963,
+            "worker_start": 2038.261662889,
+            "worker_end": 2038.276749615
+          },
+          {
+            "arrival": 2038.218835076,
+            "ingress_start": 2038.218836839,
+            "ingress_end": 2038.221142865,
+            "worker_start": 2038.29213135,
+            "worker_end": 2038.307228051
+          },
+          {
+            "arrival": 2038.21973317,
+            "ingress_start": 2038.219747741,
+            "ingress_end": 2038.221171617,
+            "worker_start": 2038.309016173,
+            "worker_end": 2038.324108909
+          },
+          {
+            "arrival": 2038.22112223,
+            "ingress_start": 2038.221124053,
+            "ingress_end": 2038.222461612,
+            "worker_start": 2038.324228699,
+            "worker_end": 2038.339317194
+          },
+          {
+            "arrival": 2038.222146369,
+            "ingress_start": 2038.222148502,
+            "ingress_end": 2038.223219074,
+            "worker_start": 2038.339421121,
+            "worker_end": 2038.354510281
+          },
+          {
+            "arrival": 2038.222534619,
+            "ingress_start": 2038.222536852,
+            "ingress_end": 2038.223694673,
+            "worker_start": 2038.354820257,
+            "worker_end": 2038.369902607
+          },
+          {
+            "arrival": 2038.223016182,
+            "ingress_start": 2038.223017554,
+            "ingress_end": 2038.224040907,
+            "worker_start": 2038.385212201,
+            "worker_end": 2038.40030046
+          },
+          {
+            "arrival": 2038.22278058,
+            "ingress_start": 2038.222782223,
+            "ingress_end": 2038.223868919,
+            "worker_start": 2038.370018227,
+            "worker_end": 2038.385117311
+          },
+          {
+            "arrival": 2038.23193163,
+            "ingress_start": 2038.231933533,
+            "ingress_end": 2038.233012487,
+            "worker_start": 2038.400409981,
+            "worker_end": 2038.415495295
+          },
+          {
+            "arrival": 2038.247492343,
+            "ingress_start": 2038.247495487,
+            "ingress_end": 2038.248571503,
+            "worker_start": 2038.415662751,
+            "worker_end": 2038.430774424
+          },
+          {
+            "arrival": 2038.262758903,
+            "ingress_start": 2038.262761788,
+            "ingress_end": 2038.263839731,
+            "worker_start": 2038.430926728,
+            "worker_end": 2038.446006805
+          },
+          {
+            "arrival": 2038.277635091,
+            "ingress_start": 2038.277637925,
+            "ingress_end": 2038.278711492,
+            "worker_start": 2038.446176444,
+            "worker_end": 2038.461277662
+          },
+          {
+            "arrival": 2038.293685007,
+            "ingress_start": 2038.293687902,
+            "ingress_end": 2038.294773636,
+            "worker_start": 2038.461428123,
+            "worker_end": 2038.476516051
+          },
+          {
+            "arrival": 2038.309466189,
+            "ingress_start": 2038.309468692,
+            "ingress_end": 2038.310555028,
+            "worker_start": 2038.476670999,
+            "worker_end": 2038.491764746
+          },
+          {
+            "arrival": 2038.325118746,
+            "ingress_start": 2038.32512176,
+            "ingress_end": 2038.326198101,
+            "worker_start": 2038.49193773,
+            "worker_end": 2038.507029063
+          },
+          {
+            "arrival": 2038.340217801,
+            "ingress_start": 2038.340219794,
+            "ingress_end": 2038.34129263,
+            "worker_start": 2038.507160957,
+            "worker_end": 2038.522247223
+          },
+          {
+            "arrival": 2038.355841001,
+            "ingress_start": 2038.355843334,
+            "ingress_end": 2038.356915829,
+            "worker_start": 2038.522348652,
+            "worker_end": 2038.537444572
+          },
+          {
+            "arrival": 2038.371022001,
+            "ingress_start": 2038.371024254,
+            "ingress_end": 2038.37204263,
+            "worker_start": 2038.53761647,
+            "worker_end": 2038.552702836
+          },
+          {
+            "arrival": 2038.385925258,
+            "ingress_start": 2038.385927361,
+            "ingress_end": 2038.38700232,
+            "worker_start": 2038.55283154,
+            "worker_end": 2038.567917696
+          },
+          {
+            "arrival": 2038.401213451,
+            "ingress_start": 2038.401215373,
+            "ingress_end": 2038.402293206,
+            "worker_start": 2038.568054877,
+            "worker_end": 2038.583139451
+          }
+        ],
+        "observed_speedup_vs_baseline": 0.9971501648851564
+      },
+      "increase_workers": {
+        "configuration": {
+          "ingress": 8,
+          "workers": 8,
+          "ingress_delay": 0.001,
+          "worker_delay": 0.015,
+          "requests": 24,
+          "clients": 12
+        },
+        "elapsed_seconds": 0.05968370200002937,
+        "requests_per_second": 402.11982829061424,
+        "diagnosis": {
+          "cause": "worker",
+          "mean_ingress_queue_and_service_seconds": 0.001252262291709864,
+          "mean_worker_queue_and_service_seconds": 0.018910192333284687,
+          "reason": "local stage residence ratio; hypothesis, not causal proof"
+        },
+        "traces": [
+          {
+            "arrival": 2038.597161534,
+            "ingress_start": 2038.597163437,
+            "ingress_end": 2038.598762545,
+            "worker_start": 2038.598768234,
+            "worker_end": 2038.613846207
+          },
+          {
+            "arrival": 2038.598242246,
+            "ingress_start": 2038.598244149,
+            "ingress_end": 2038.599943695,
+            "worker_start": 2038.5999472,
+            "worker_end": 2038.615023682
+          },
+          {
+            "arrival": 2038.601736478,
+            "ingress_start": 2038.60173799,
+            "ingress_end": 2038.602825487,
+            "worker_start": 2038.602831987,
+            "worker_end": 2038.617922023
+          },
+          {
+            "arrival": 2038.599407132,
+            "ingress_start": 2038.599408894,
+            "ingress_end": 2038.600994883,
+            "worker_start": 2038.601001863,
+            "worker_end": 2038.61602726
+          },
+          {
+            "arrival": 2038.601961899,
+            "ingress_start": 2038.601963151,
+            "ingress_end": 2038.603207072,
+            "worker_start": 2038.603211819,
+            "worker_end": 2038.618640774
+          },
+          {
+            "arrival": 2038.601177652,
+            "ingress_start": 2038.601179625,
+            "ingress_end": 2038.602522957,
+            "worker_start": 2038.602527434,
+            "worker_end": 2038.617671795
+          },
+          {
+            "arrival": 2038.602349168,
+            "ingress_start": 2038.60235087,
+            "ingress_end": 2038.603432914,
+            "worker_start": 2038.603438812,
+            "worker_end": 2038.618828009
+          },
+          {
+            "arrival": 2038.602171491,
+            "ingress_start": 2038.602173124,
+            "ingress_end": 2038.60325969,
+            "worker_start": 2038.60326659,
+            "worker_end": 2038.61872354
+          },
+          {
+            "arrival": 2038.602604257,
+            "ingress_start": 2038.602605869,
+            "ingress_end": 2038.603699385,
+            "worker_start": 2038.613973945,
+            "worker_end": 2038.629055964
+          },
+          {
+            "arrival": 2038.60274889,
+            "ingress_start": 2038.602750532,
+            "ingress_end": 2038.603834594,
+            "worker_start": 2038.615077766,
+            "worker_end": 2038.630155629
+          },
+          {
+            "arrival": 2038.602929935,
+            "ingress_start": 2038.602931388,
+            "ingress_end": 2038.605332434,
+            "worker_start": 2038.617737853,
+            "worker_end": 2038.632812787
+          },
+          {
+            "arrival": 2038.603128277,
+            "ingress_start": 2038.60312993,
+            "ingress_end": 2038.604201674,
+            "worker_start": 2038.61609492,
+            "worker_end": 2038.631176039
+          },
+          {
+            "arrival": 2038.614866902,
+            "ingress_start": 2038.614868474,
+            "ingress_end": 2038.615943673,
+            "worker_start": 2038.618270344,
+            "worker_end": 2038.633360536
+          },
+          {
+            "arrival": 2038.615647138,
+            "ingress_start": 2038.61564877,
+            "ingress_end": 2038.617258659,
+            "worker_start": 2038.618888983,
+            "worker_end": 2038.634008734
+          },
+          {
+            "arrival": 2038.617213733,
+            "ingress_start": 2038.617215976,
+            "ingress_end": 2038.618289082,
+            "worker_start": 2038.619927889,
+            "worker_end": 2038.635018712
+          },
+          {
+            "arrival": 2038.622324554,
+            "ingress_start": 2038.622327048,
+            "ingress_end": 2038.623403969,
+            "worker_start": 2038.631244795,
+            "worker_end": 2038.646330159
+          },
+          {
+            "arrival": 2038.621990083,
+            "ingress_start": 2038.621991785,
+            "ingress_end": 2038.623067235,
+            "worker_start": 2038.629167624,
+            "worker_end": 2038.644241021
+          },
+          {
+            "arrival": 2038.621668115,
+            "ingress_start": 2038.621670328,
+            "ingress_end": 2038.622751481,
+            "worker_start": 2038.622756879,
+            "worker_end": 2038.637838974
+          },
+          {
+            "arrival": 2038.622238593,
+            "ingress_start": 2038.622240465,
+            "ingress_end": 2038.623318378,
+            "worker_start": 2038.63021403,
+            "worker_end": 2038.645301688
+          },
+          {
+            "arrival": 2038.622523917,
+            "ingress_start": 2038.622525249,
+            "ingress_end": 2038.623677551,
+            "worker_start": 2038.63290964,
+            "worker_end": 2038.647993482
+          },
+          {
+            "arrival": 2038.630062723,
+            "ingress_start": 2038.630065067,
+            "ingress_end": 2038.631145443,
+            "worker_start": 2038.633453263,
+            "worker_end": 2038.648535373
+          },
+          {
+            "arrival": 2038.630851762,
+            "ingress_start": 2038.630853424,
+            "ingress_end": 2038.631927512,
+            "worker_start": 2038.634134633,
+            "worker_end": 2038.649218116
+          },
+          {
+            "arrival": 2038.631843178,
+            "ingress_start": 2038.631844771,
+            "ingress_end": 2038.632915824,
+            "worker_start": 2038.635074504,
+            "worker_end": 2038.650151967
+          },
+          {
+            "arrival": 2038.634107653,
+            "ingress_start": 2038.634109716,
+            "ingress_end": 2038.635295468,
+            "worker_start": 2038.637897569,
+            "worker_end": 2038.65297375
+          }
+        ],
+        "observed_speedup_vs_baseline": 6.223128367601974
+      }
+    }
+  }
+}
